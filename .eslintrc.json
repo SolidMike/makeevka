@@ -1,0 +1,13 @@
+{
+	"ignorePatterns": ["dev/static/js/vendor/*.js"],
+  "overrides": [
+    {
+      "files": [
+        "dev/static/**/*.js"
+      ],
+      "extends": [
+        "standard"
+      ]
+    }
+  ]
+}

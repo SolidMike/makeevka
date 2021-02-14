@@ -1,0 +1,23 @@
+extends layout/main
+
+block variables
+    -var title = 'Страница одной новости'
+    -var pageClass = 'newsSinglePage'
+
+block content
+    section.news-single
+        .container
+            .row
+                .news-single__content
+                    .news-single__header
+                        .news-single__image(style="background-image: url('./static/images/content/news-img.jpg')")
+                        .news-single__info
+                            .news-single__date Добавлено: 2 сентября 2020г
+                            .news-single__title.subtitle Широкополосный доступ к сети Интернет
+                            .news-single__preview Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет. Лучшее решение для компаний, которым необходимо закачивать из сети Интернет большие объемы...
+                    .news-single__body
+                        | ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum
+                        | ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumvlorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum
+                    .news-single__footer
+                        a(href="#").subtitle.news-single__link Вернуться к новостям
+                        a(href="/").news-single__link На главную

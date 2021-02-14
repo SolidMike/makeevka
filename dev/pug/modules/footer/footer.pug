@@ -1,0 +1,48 @@
+footer.footer
+    .container
+        .row
+            .footer__content
+                .grid.footer__grid
+                    .logo.footer__logo
+                        a(href="/")
+                            img(src="/static/images/common/logo.png")
+                    .work-hours
+                        p Будние дни - с 08:00 до 19:00
+                        p Выходные - с 09:00 до 18:00
+                        +iconWithText('./static/images/common/mail.svg', 'mekeevprov@gmail.com', 'mailto:mekeevprov@gmail.com')(class="email")
+                    .footer__nav
+                        ul.nav
+                            li.nav-item
+                                a.nav-link.active(href='#') Главная
+                            li.nav-item
+                                a.nav-link(href='#') Клиентам
+                            li.nav-item
+                                a.nav-link(href='#') О нас
+                            li.nav-item
+                                a.nav-link(href='#') Тарифы
+                            li.nav-item
+                                a.nav-link(href='#') Новости
+                            li.nav-item
+                                a.nav-link(href='#') IPTV
+                            li.nav-item
+                                a.nav-link(href='#') Контакты
+                    +button('', 'Обратный звонок', false)(data-toggle="modal" data-target="#custom-modal-callback")
+        .row
+            .footer__contacts
+                -
+                    const phonesList = [
+                        {href: '0502000290', phone: '050-2000-290'},
+                        {href: '0710997171', phone: '071-099-71-71'},
+                        {href: '0999112008', phone: '099-911-20-08'},
+                        {href: '0623223355', phone: '(0623) 22-33-55'},
+                        {href: '0666271271', phone: '066-6-271-271'},
+                    ]
+                each obj in phonesList
+                    a(href="tel:" + obj.href).footer__phone #{obj.phone}
+        .row
+            .footer__info-bar.info-bar
+                .footer__copyright Макеевка онлайн © Все права защищены. 2020
+                .footer__socials
+                    include ../socials/socials
+                .footer__policy-link
+                    a(href='#custom-modal-policy', data-toggle='modal', data-target='#custom-modal-policy') Политика конфиденциальности

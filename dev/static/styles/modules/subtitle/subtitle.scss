@@ -1,0 +1,7 @@
+.subtitle {
+  font-weight: bold;
+  font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+  text-transform: capitalize;
+  color: #003659;
+  padding: 1rem 0;
+}

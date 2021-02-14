@@ -1,0 +1,55 @@
+div[class^="parallax"] {
+  position: absolute!important;
+  @include media-breakpoint-down(lg) {
+    display: none!important;
+  }
+}
+div[id^="scene"] {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  //overflow: hidden;
+}
+
+.parallax-homepage-1 {
+  right: -35px!important;
+  left: auto!important;
+  top: 40%!important;
+}
+.parallax-homepage-2 {
+  left: -100px!important;
+}
+.parallax-homepage-3 {
+  right: 60px!important;
+  left: auto!important;
+  top: 100px!important;
+}
+.parallax-homepage-4 {
+  top: 50%!important;
+}
+.parallax-homepage-5 {
+  right: 10%!important;
+  left: auto!important;
+  top: 70%!important;
+}
+.parallax-homepage-6 {
+  top: 100%!important;
+}
+.parallax-about-1 {
+  top: -25%!important;
+}
+.parallax-about-2 {
+  right: -6%!important;
+  left: auto!important;
+}
+.parallax-about-3 {
+  right: 20% !important;
+  left: auto!important;
+  top: 75% !important
+}
+.parallax-about-4 {
+  right: 0!important;
+  left: auto!important;
+  top: 65% !important;
+}

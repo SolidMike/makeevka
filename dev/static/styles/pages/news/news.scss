@@ -1,0 +1,9 @@
+.news {
+  background: url('../images/common/news-bg.jpg') no-repeat;
+  background-position-y: 25vh;
+  &__grid {
+    grid-template-columns: repeat(auto-fit, minmax(calc(240px + 10vw), 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem 2rem;
+  }
+}

@@ -1,0 +1,9 @@
+mixin iconWithText(icon, text, href)
+    if href
+        a(href=href).icon-with-text&attributes(attributes)
+            .icon-with-text__icon(style=`background-image:url(${icon})`)
+            span #{text}
+    else
+        .icon-with-text&attributes(attributes)
+            .icon-with-text__icon(style=`background-image:url(${icon})`)
+            span #{text}

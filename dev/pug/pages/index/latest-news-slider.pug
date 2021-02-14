@@ -1,0 +1,34 @@
+-
+    const latesNews = [
+        {
+            img: 'static/images/content/news-img.jpg',
+            date: 'Добавлено: 2 сентября 2020г',
+            title: 'Широкополосный доступ к сети Интернет',
+            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет. Лучшее решение для компаний, которым необходимо закачивать из сети Интернет большие объемы...',
+            href: '#'
+        },
+        {
+            img: 'static/images/content/news-img.jpg',
+            date: 'Добавлено: 3 сентября 2020г',
+            title: 'Широкополосный доступ к сети Интернет2',
+            preview: 'Услуга ориентированная на высокоскоростной',
+            href: '#'
+        },
+        {
+            img: 'static/images/content/news-img.jpg',
+            date: 'Добавлено: 4 сентября 2020г',
+            title: 'Широкополосный доступ к сети Интернет3',
+            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет.',
+            href: '#'
+        },
+    ]
+section.latest-news
+    .container-fluid
+        .row
+            .container
+                .row
+                    .title последние новости
+            .swiper-container.latest-news-slider
+                .swiper-wrapper
+                    +customCard(latesNews, true)
+            .swiper-pagination.latest-news-slider__pagination

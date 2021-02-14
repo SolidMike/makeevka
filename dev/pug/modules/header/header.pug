@@ -1,0 +1,64 @@
+header.header
+    .container-fluid
+        .row
+            .container
+                .row
+                    .header__info-bar.info-bar
+                        .header__date
+                            +iconWithText('static/images/common/calendar.svg', '8.09.2020г').top-bar__text-with-icon
+                            +iconWithText('static/images/common/clock.svg', '').top-bar__text-with-icon.header__clock
+                        .header__socials
+                            include ../socials/socials
+    .container-fluid
+        .row
+            .header__content
+                .grid.header__grid
+                    .logo.header__logo
+                        a(href="/")
+                            img(src="/static/images/common/logo.png")
+                    .header__grid_hidden_md.header__contacts
+                        .contacts-slider__subtitle Звоните нам!
+                        -
+                            const phones = [
+                                {href: '0502000290', phone: '050-2000-290'},
+                                {href: '0710997171', phone: '071-099-71-71'},
+                                {href: '0999112008', phone: '099-911-20-08'},
+                                {href: '0623223355', phone: '(0623) 22-33-55'},
+                                {href: '0666271271', phone: '066-6-271-271'},
+                            ]
+                        .swiper-container.contacts-slider
+                            .swiper-wrapper
+                                each obj in phones
+                                    .swiper-slide.contacts-slider__slide
+                                        a(href="tel:" + obj.href) #{obj.phone}
+                            .contacts-slider__btn-wrapper
+                                .swiper-button-next.contacts-slider__btn-next
+                                    svg(width='20' height='17' viewBox='0 0 20 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M9.72119 16.5938L0.436367 0.511963H19.006L9.72119 16.5938Z')
+                                .swiper-button-prev.contacts-slider__btn-prev
+                                    svg(width='20' height='17' viewBox='0 0 20 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M9.72119 16.5938L0.436367 0.511963H19.006L9.72119 16.5938Z')
+                        +button('header__btn', 'Заказать звонок', false)(data-toggle="modal" data-target="#custom-modal-callback")
+                    .header__grid_hidden_md.header__app
+                        .header__app-item
+                            a(href="")
+                                img(src="/static/images/common/google-play.png")
+                        .header__app-item
+                            a(href="")
+                                img(src="/static/images/common/app-store.png")
+                    .header__grid_hidden_md.header__qr-code
+                        img(src="/static/images/common/qr-code.png")
+                    .header__grid_hidden_md.personal-acc.header__personal-acc
+                        .personal-acc__title Ваш статус
+                        .personal-acc__list
+                            .personal-acc__element Логин
+                            .personal-acc__element user121
+                            .personal-acc__element UID
+                            .personal-acc__element 1464325
+                            .personal-acc__element Баланс
+                            .personal-acc__element 200 рос.руб
+                        .personal-acc__status Оплачено до 01.01.2020
+                        .personal-acc__link
+                            a(href="") Перейти в личный кабинет
+            include ../main-nav/main-nav
+

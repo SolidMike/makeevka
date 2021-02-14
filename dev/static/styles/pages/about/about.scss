@@ -1,0 +1,30 @@
+.about {
+  &__text,
+  &__image {
+    @include make-col-ready();
+    @include make-col(6);
+    @include media-breakpoint-down(sm) {
+      @include make-col(12);
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.about-form {
+  &__girl {
+    position: absolute;
+    left: 48vw;
+    bottom: 0;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  &__title {
+    background-color: #fff;
+  }
+  &__form {
+    background: url('../images/common/about-form-bg.jpg') no-repeat;
+    padding: 2rem 0;
+    background-size: cover;
+  }
+}

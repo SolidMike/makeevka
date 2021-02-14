@@ -1,0 +1,12 @@
+extends layout/main
+
+block variables
+    -var title = 'Вопрос - ответ'
+    -var pageClass = 'faqPage'
+
+block content
+    section.faq
+        .container
+            .row
+                .title вопрос - ответ
+                include ./modules/custom-accordion/custom-accordion

@@ -1,0 +1,51 @@
+.custom-form {
+  background-color: $white;
+  border-radius: 1rem;
+  .form-control {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #757575;
+    border-radius: 0;
+    padding: 0;
+    &:focus {
+      font-weight: 600;
+      color: #008CB5;
+      &::placeholder {
+        color: #008CB5;
+      }
+    }
+  }
+  textarea.form-control {
+    max-height: 60px;
+  }
+}
+.required {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "*";
+    color: #BA0000;
+    top: 24px;
+    right: 6px;
+  }
+}
+
+.form-about {
+  padding: 1.5rem 3rem;
+  max-width: 400px;
+  margin: 0 auto;
+  &__btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    top: 14px;
+  }
+  &__policy {
+    text-align: center;
+    color: $white;
+    margin: 3rem auto 1.5rem auto;
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,22 @@
+.aside-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: no-repeat center;
+  background-size: cover;
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+  @media (max-width:1750px) {
+  opacity: .2;
+}
+  &_homepage {
+    width: 320px;
+    height: 475px;
+  }
+  &_about {
+    top: 100px;
+    width: 450px;
+    height: 400px;
+  }
+}

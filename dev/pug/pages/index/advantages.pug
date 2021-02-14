@@ -1,0 +1,27 @@
+section.advantages
+    .container-fluid.background_color_white
+        .row
+            .container
+                .row
+                    .advantages__title Почему мы лучшие?
+                    .advantages__subtitle
+                        | Основной наш капитал — это <span>коллектив и наша репутация</span>
+                        | надежного партнера для наших клиентов и поставщиков.
+    .container
+        .row
+            .advantages__list.list
+                    -
+                        const advantages = [
+                            {icon: '/static/images/content/advantages/LIR.png', title: 'Статус LIR', descr: 'Статус LIR (Local Internet Registry), позволяет выделять подсети IP-адресов с их последующим делегированием клиентам.'},
+                            {icon: '/static/images/content/advantages/13.png', title: '13 лет опыта', descr: 'Высококвалифицированный штат сертифицированных специалистов (CISCO,UNIX)'},
+                            {icon: './static/images/content/advantages/department.svg', title: 'Собственный проектный отдел', descr: 'Cо специалистами и опытом работы в области проектирования кабельных и оптоволоконных систем.'},
+                            {icon: './static/images/content/advantages/warehouse.svg', title: 'Собственный склад', descr: 'Кабельной продукции и активного сетевого оборудования.'},
+                            {icon: './static/images/content/advantages/tools.svg', title: 'Современные инструменты', descr: 'Высококвалифицированная бригада оснащенная для выполнения всего спектра работ'},
+                            ]
+                    each obj in advantages
+                        .list__item
+                            .list__icon(style=`background-image: url(${obj.icon})`)
+                            .list__title !{obj.title}
+                            .list__descr !{obj.descr}
+
+

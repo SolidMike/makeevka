@@ -1,0 +1,21 @@
+mixin customCard(arr, slider)
+    each obj in arr
+        if slider
+            .swiper-slide
+                .custom-card&attributes(attributes)
+                    .custom-card__inner
+                        .custom-card__image(style=`background-image: url(${obj.img})`)
+                        .custom-card__date #{obj.date}
+                        .custom-card__title.subtitle #{obj.title}
+                        .custom-card__preview !{obj.preview}
+                    .custom-card__footer
+                        +link('custom-card__link', obj.href, 'Читать дальше')
+        else
+            .custom-card&attributes(attributes)
+                .custom-card__inner
+                    .custom-card__image(style=`background-image: url(${obj.img})`)
+                    .custom-card__date #{obj.date}
+                    .custom-card__title.subtitle #{obj.title}
+                    .custom-card__preview !{obj.preview}
+                .custom-card__footer
+                    +link('custom-card__link', obj.href, 'Читать дальше')

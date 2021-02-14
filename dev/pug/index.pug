@@ -1,0 +1,28 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+	-var pageClass = 'homePage'
+
+block content
+	#scene
+		.parallax-homepage-1(data-depth="0.2")
+			img(src="./static/images/common/parallax-homepage-1.png")
+		.parallax-homepage-2(data-depth="0.6")
+			img(src="./static/images/common/parallax-homepage-2.png")
+		.parallax-homepage-3(data-depth="0.4")
+			img(src="./static/images/common/parallax-homepage-3.png")
+	include ./pages/index/main-slider
+	#scene2
+		.parallax-homepage-4(data-depth="0.8")
+			img(src="./static/images/common/parallax-homepage-4.png")
+		.parallax-homepage-5(data-depth="1")
+			img(src="./static/images/common/parallax-homepage-5.png")
+		.parallax-homepage-6(data-depth="1")
+			img(src="./static/images/common/parallax-homepage-6.png")
+	include ./pages/index/advantages
+	.wrapper_bg_multisection
+		include ./pages/index/latest-news-slider
+		include ./modules/seo/seo
+
+

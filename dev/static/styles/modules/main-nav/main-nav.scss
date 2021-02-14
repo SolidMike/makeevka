@@ -1,0 +1,155 @@
+.main-nav {
+  width: 100%;
+  background: $white;
+  position: absolute;
+  z-index: 20;
+  top: 100%;
+  background: rgba(246, 246, 246, .9);
+  .navbar {
+    min-height: 70px;
+    @include media-breakpoint-down(lg) {
+      justify-content: center!important;
+      text-align: center;
+    }
+  }
+  .nav-item.active {
+    .nav-link {
+      transform: scale(1.2);
+      color: #01ADFF!important;
+    }
+  }
+  .collapse.navbar-collapse {
+    justify-content: center;
+  }
+  .navbar-nav {
+    justify-content: space-around;
+    max-width: 1170px;
+    flex-grow: 1;
+  }
+  .nav-link {
+    color: $black!important;
+    text-transform: capitalize;
+    transition: all .4s;
+    font-weight: 600;
+    &:hover {
+      transform: scale(1.2);
+      color: #01ADFF!important;
+    }
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .25rem 1rem;
+    color: $white;
+    transition: all .4s;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #0056b3;
+    }
+    &__icon {
+      padding-right: 1rem;
+    }
+    @include media-breakpoint-down(lg) {
+      justify-content: center;
+    }
+    &__icon {
+      padding-right: 1rem;
+      svg {
+        fill: $white;
+      }
+    }
+  }
+  .dropdown-menu {
+    background-color: #236FC5;
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    @include media-breakpoint-up(lg) {
+      &:before {
+        content: url('../images/common/main-nav-icons/triangle-homePage.svg');
+        position: absolute;
+        width: 16px;
+        height: 19px;
+        bottom: 98%;
+        left: 5%;
+      }
+    }
+  }
+  .navbar-toggler {
+    color: rgba(0, 0, 0, .8);
+    border-color: rgba(0, 0, 0, 1);
+    border: 2px solid;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .header__contacts,
+  .header__personal-acc {
+    a {
+      color: $black;
+    }
+  }
+  &_color_mod,
+  &_color_mod a {
+    color: $black;
+  }
+  &_color_mod {
+    .personal-acc__element {
+      &:nth-child(odd) {
+        color: rgba(0, 0, 0, 0.69);
+      }
+    }
+  }
+}
+
+.homePage {
+  .main-nav {
+    background: linear-gradient(90.01deg, rgba(13, 168, 231, 0.5) 2.14%, rgba(95, 100, 243, 0.5) 99.68%);
+    @include media-breakpoint-down(lg) {
+      background: linear-gradient(90.01deg, rgba(13, 168, 231, 0.8) 2.14%, rgba(95, 100, 243, 0.8) 99.68%);
+    }
+    .nav-link {
+      color: $white!important;
+      &:hover {
+        color: #7EEDFF!important;
+      }
+    }
+    .nav-item.active {
+      .nav-link {
+        transform: scale(1.2);
+        color: #7EEDFF!important;
+      }
+    }
+    .navbar-toggler {
+      color: rgba(255, 255, 255, .8);
+      border-color: rgba(255, 255, 255, 1);
+      border: 2px solid;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .header__contacts,
+    .header__personal-acc {
+      a {
+        color: $white;
+      }
+    }
+    &_color_mod,
+    &_color_mod a {
+      color: $white;
+    }
+    &_color_mod {
+      .personal-acc__element {
+        &:nth-child(odd) {
+          color: rgba(255, 255, 255, 0.69);
+        }
+      }
+    }
+  }
+}

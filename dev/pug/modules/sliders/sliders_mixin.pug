@@ -1,0 +1,9 @@
+mixin slider(arr, className)
+    .swiper-container(class= className)
+        .swiper-wrapper
+            each obj in arr
+                block slides
+        block controls
+        if pageClass === 'homePage'
+            .main-slider__overlay
+                object(type="image/svg+xml" data="./static/images/common/overlay.svg")

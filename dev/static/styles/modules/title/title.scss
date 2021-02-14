@@ -1,0 +1,8 @@
+.title {
+  font-weight: bold;
+  font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));
+  text-transform: uppercase;
+  color: #4F7BF6;
+  padding: 2rem 0;
+  @include make-col-ready();
+}

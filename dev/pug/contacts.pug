@@ -1,0 +1,46 @@
+extends layout/main
+
+block variables
+    -var title = 'Контакты'
+    -var pageClass = 'contactsPage'
+
+block content
+    .wrapper_bg_multisection
+        section.contacts
+            .container
+                .row
+                    .title Контакты
+            .container-fluid
+                .row
+                    .contacts__map#map
+                        .info.contacts__info
+                            .info__item
+                                +iconWithText('./static/images/common/smartphone.svg', 'Наши телефоны')(class="info__header")
+                                .info__list.info-list.info-list_column_sm
+                                    .info-list__item.info-list__item_width_sm
+                                        a(href="tel:0623223355") (0623) 22-33-55
+                                    .info-list__item.info-list__item_width_sm
+                                        a(href="tel:0999112008") 099-911-20-08
+                                    .info-list__item.info-list__item_width_sm
+                                        a(href="tel:0666271271") 066-6-271-271
+                                    .info-list__item.info-list__item_width_sm
+                                        a(href="tel:0710997171") 071-099-71-71
+                                    .info-list__item.info-list__item_width_sm
+                                        a(href="tel:0502000290") 050-2000-290
+                                    .info-list__item.info-list__item_width_sm
+                                        +iconWithText('./static/images/common/mail.svg', 'mekeevprov@gmail.com', 'mailto:mekeevprov@gmail.com')(class="email")
+                            .info__item
+                                +iconWithText('./static/images/common/calendar-contacts.svg', 'График работы')(class="info__header")
+                                .info__list.info-list
+                                    .info-list__item Будние дни - с 08:00 до 19:00
+                                    .info-list__item Выходные - с 09:00 до 18:00
+                            .info__item
+                                +iconWithText('./static/images/common/location.svg', 'Адрес нашего офиса')(class="info__header")
+                                .info__list.info-list
+                                    .info-list__item г. Макеевка, ул. Островского, 1/35 г. Макеевка
+                                    .info-list__item г. Макеевка, кв-л Шахтерский, 15
+                                    .info-list__item р-н Холодная Балка, ул. Кирова, д. 14а
+        include ./modules/seo/seo
+block script
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=CGIyD5oHmwlMee5W', type='text/javascript')
+    script(src='static/js/placemark.js', type='text/javascript')

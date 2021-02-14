@@ -1,0 +1,14 @@
+-
+    const mainSlider = [
+        {img: 'static/images/content/main-slider/main-slider-1.jpg', title: 'Макеевка онлайн — твой лучший интернет провайдер!', descr: 'Мы рады сообщить Вам об открытии офиса в р-не Холодная Балка <br> по адресу ул. Кирова, д. 14а (ТЦ «Шахтер»)'},
+        {img: 'static/images/content/main-slider/main-slider-1.jpg', title: 'Макеевка онлайн — твой лучший интернет провайдер!2', descr: 'Мы рады сообщить Вам об открытии офиса в р-не Холодная Балка <br> по адресу ул. Кирова, д. 14а (ТЦ «Шахтер»)2'}]
++slider(mainSlider, 'main-slider')
+    block slides
+        .swiper-slide
+            img(src=obj.img alt="main-slider-1")
+            .main-slider__caption
+                .main-slider__title.title=obj.title
+                .main-slider__descr
+                    p !{obj.descr}
+    block controls
+        .swiper-pagination.main-slider__pagination

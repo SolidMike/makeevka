@@ -1,0 +1,61 @@
+extends layout/main
+
+block variables
+    -var title = 'О нас'
+    -var pageClass = 'aboutPage'
+
+block content
+    section.about
+        .aside-image.aside-image_about(style="background-image:url('./static/images/common/about-aside-img.png')")
+        .container
+            .row
+                .title О нас
+                .about__text
+                    p
+                    | <br>lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumipsumlorem ipsumipsumlorem ipsumipsumlorem ipsumipsumlorem ipsum
+                .about__image
+                    img(src="./static/images/content/office.jpg" title="Офис" alt="Офис")
+                    p(style="text-align: center;") Заглушка фото (лучше конечно офис сфоткать)
+    section.about-form
+        #scene3
+            .parallax-about-1(data-depth="0.2")
+                img(src="./static/images/common/parallax-about-1.png")
+            .parallax-about-2(data-depth="0.6")
+                img(src="./static/images/common/parallax-about-2.png")
+            .parallax-about-3(data-depth="0.4")
+                img(src="./static/images/common/parallax-about-3.png")
+            .parallax-about-4(data-depth="0.4")
+                img(src="./static/images/common/parallax-about-4.png")
+        .about-form__title
+            .container
+                .row
+                    .title Есть вопросы? Свяжитесь с нами!
+        .about-form__form
+            .container
+                .row
+                    .col-md-6
+                        form.form-about.custom-form
+                            .form-group.row
+                                .col-12
+                                    label.required
+                                    input#name.form-control(name='name', placeholder='Как вас зовут?', type='text', required='required')
+                            .form-group.row
+                                .col-12
+                                    label.required
+                                    input#phone.form-control(name='phone', placeholder='Номер телефона', type='text', required='required')
+                            .form-group.row
+                                .col-12
+                                    label
+                                    textarea#message.form-control(name='message', placeholder="Текст сообщения...", cols='40', rows='5')
+                            .form-group.row
+                                .col-12
+                                    label
+                                    input#address.form-control(name='address', placeholder='Ваш адрес', type='text')
+                            .form-group.row
+                                .col-12
+                                    +button('form-about__btn', 'Отправить', false)(name='submit' type="submit")
+                        p.form-about__policy Нажимая на кнопку Отправить, вы соглашаетесь с условиями политики конфиденциальности
+                    .about-form__girl
+                        img(src="./static/images/content/about-form-girl.png")
+
+

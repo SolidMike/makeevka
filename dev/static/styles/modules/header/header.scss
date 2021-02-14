@@ -1,0 +1,132 @@
+header { flex: 0 0 auto; }
+
+.header {
+  position: relative;
+  &__logo {
+    @include media-breakpoint-down(md) {
+      max-width: 7rem;
+    }
+  }
+  &__contacts {
+    position: relative;
+  }
+  &__socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .socials__item {
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+    }
+    .socials__link {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__date {
+    display: flex;
+  }
+  &__content {
+    width: 100%;
+    background: linear-gradient(274.09deg, #8D23EE -19.73%, #01EAFE 95.07%);
+    padding: 1rem 0;
+    color: #fff;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  &__grid {
+    max-width: 1170px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    grid-gap: 1rem 0;
+    &_hidden_md {
+      &:not(:first-child) {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+    }
+    &_show_lg {
+      margin: .5rem auto;
+      @include media-breakpoint-up(lg) {
+        display: none!important;
+      }
+    }
+  }
+  &__app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+  }
+  &__btn {
+    @include media-breakpoint-down(lg) {
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+.contacts-slider {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 3.5rem;
+    margin: 1rem 0;
+  &__subtitle {
+    text-align: center;
+    position: absolute;
+    left: 40px;
+    top: -5px;
+  }
+  &__slide {
+    transition: all .4s;
+  }
+  &__slide.swiper-slide-active {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__btn-prev,
+  &__btn-next {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      fill: #E4E4E4;
+      transition: all .2s;
+    }
+    &:hover {
+      svg {
+        fill: #0698CC;
+      }
+    }
+  }
+  &__btn-next {
+    transform: rotate(180deg);
+  }
+  &__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.top-bar {
+  &__text-with-icon {
+    .icon-with-text__icon {
+      margin-right: .5rem;
+      color: #0080AB;
+      width: 18px;
+      height: 18px;
+    }
+    span {
+      color: #13D1FC;
+    }
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+extends layout/main
+
+block variables
+    -var title = 'Контентная страница'
+    -var pageClass = 'contentPage'
+
+block content
+    section.content-page
+        .container
+            .row
+                .title Контентная страница
+            .row
+                .text.content-page__text
+                    | пункт 1
+                    | orem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumipsumlorem ipsumipsumlorem ipsumipsumlorem ipsumipsumlorem ipsum
+                    br
+                    | пункт 2
+                    | orem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumipsumlorem ipsumipsumlorem ipsumipsumlorem ipsumipsumlorem ipsum
+                    br
+                    | пункт N
+                    | orem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumipsumlorem ipsumipsumlorem ipsumipsumlorem ipsumipsumlorem ipsum
+            .row
+                .content-page__download
+                    +link('download-btn', 'path-to-file', 'Скачать договор (Формат)')(download="#")

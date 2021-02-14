@@ -1,0 +1,5 @@
+mixin button(buttonClass, buttonText, disabled)
+    button(class="button " + buttonClass disabled=disabled)&attributes(attributes) #{buttonText}
+
+mixin link(linkClass, linkHref, linkText)
+    a(class="button " + linkClass href=linkHref)&attributes(attributes) #{linkText}

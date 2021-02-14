@@ -1,0 +1,8 @@
+.content-page {
+  &__text {
+    margin-top: calc(1rem + 2vh);
+  }
+  &__download {
+    @include make-col-ready();
+  }
+}

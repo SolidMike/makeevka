@@ -1,0 +1,113 @@
+extends layout/main
+
+block variables
+    -var title = 'Новости'
+    -var pageClass = 'newsPage'
+
+block content
+    section.news
+        .container
+            .row
+                .news__title.title Новости
+        .container_custom_width
+            .grid.news__grid
+                -
+                    const news = [
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 2 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет',
+                            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет. Лучшее решение для компаний, которым необходимо закачивать из сети Интернет большие объемы...',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 3 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет2',
+                            preview: 'Услуга ориентированная на высокоскоростной',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 4 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет3',
+                            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет.',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 2 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет',
+                            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет. Лучшее решение для компаний, которым необходимо закачивать из сети Интернет большие объемы...',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 3 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет2',
+                            preview: 'Услуга ориентированная на высокоскоростной',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 4 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет3',
+                            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет.',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 2 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет',
+                            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет. Лучшее решение для компаний, которым необходимо закачивать из сети Интернет большие объемы...',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 3 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет2',
+                            preview: 'Услуга ориентированная на высокоскоростной',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 4 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет3',
+                            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет.',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 2 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет',
+                            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет. Лучшее решение для компаний, которым необходимо закачивать из сети Интернет большие объемы...',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 3 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет2',
+                            preview: 'Услуга ориентированная на высокоскоростной',
+                            href: './news-single-page.html'
+                        },
+                        {
+                            img: 'static/images/content/news-img.jpg',
+                            date: 'Добавлено: 4 сентября 2020г',
+                            title: 'Широкополосный доступ к сети Интернет3',
+                            preview: 'Услуга ориентированная на высокоскоростной групповой доступ к сети Интернет.',
+                            href: './news-single-page.html'
+                        },
+                    ]
+                +customCard(news, false)(class="news__card")
+            nav(aria-label='...')
+                ul.pagination.pagination-lg
+                    li.page-item.disabled
+                        a.page-link(href='#', tabindex='-1') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        | ...
+                    li.page-item
+                        a.page-link(href='#') 4

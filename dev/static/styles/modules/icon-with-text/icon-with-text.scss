@@ -1,0 +1,14 @@
+.icon-with-text {
+  display: flex;
+  align-items: center;
+  &__icon {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.email {
+  .icon-with-text__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
